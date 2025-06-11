@@ -1,0 +1,175 @@
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .navbar {
+  background-color: #1f2a36;
+}
+
+body.light .navbar {
+  background-color: #709bca;
+}
+
+.nav-logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+body.dark .nav-links li::after {
+  background-color: white;
+}
+
+body.light .nav-links li::after {
+  color: #000000;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.navbar-right img {
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-right img:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* --- Side Drawer --- */
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #1f2a36;
+  color: white;
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 1001;
+}
+
+.side-drawer.open {
+  left: 0;
+}
+
+.side-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.side-drawer ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.close-icon {
+  font-size: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* --- Overlay --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
