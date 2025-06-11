@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logo from '../../assets/images/universitylogos.png';
+import logo from '../../assets/images/universitylogos2.png';
 import Search from '../../assets/search.png';
-import User from '../../assets/profile-user.png';
+import User from '../../assets/user.png';
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Apply theme to body
   useEffect(() => {
     document.body.className = darkMode ? 'dark' : 'light';
   }, [darkMode]);
@@ -38,10 +37,8 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Overlay */}
       {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
 
-      {/* Side Drawer */}
       <div className={`side-drawer ${menuOpen ? 'open' : ''}`}>
         <FaTimes className="close-icon" onClick={() => setMenuOpen(false)} />
         <ul>
