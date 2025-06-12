@@ -8,6 +8,16 @@ import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     document.body.className = darkMode ? 'dark' : 'light';
@@ -15,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <img src={logo} alt="University Logo" className="nav-logo" />
 
         <ul className="nav-links">

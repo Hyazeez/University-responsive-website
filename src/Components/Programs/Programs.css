@@ -1,0 +1,51 @@
+.programs {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.programs-info img{
+    width: 100%;
+    height:270px;
+    border-radius: 20px;
+    display: block;
+}
+
+.programs-info{
+    flex-basis: 31%;
+    position: relative;
+}
+
+.caption{
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.61);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.4s;
+}
+
+.caption img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.programs-info:hover .caption{
+    opacity: 1;
+    padding-top: 0;
+}

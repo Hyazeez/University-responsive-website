@@ -1,4 +1,4 @@
-/* Theme Styles */
+
 body.light {
   background-color: #ffffff;
   color: #000000;
@@ -9,13 +9,12 @@ body.dark {
   color: #ffffff;
 }
 
-/* Transparent Navbar */
 .navbar {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* transparent */
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -27,14 +26,16 @@ body.dark {
   transition: background-color 0.3s ease;
 }
 
-/* Logo */
+.navbar.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 .nav-logo {
   width: 100px;
   height: 95px;
   cursor: pointer;
 }
 
-/* Nav Links (Desktop) */
 .nav-links {
   display: flex;
   list-style: none;
@@ -63,7 +64,6 @@ body.dark {
   width: 100%;
 }
 
-/* Right Side Items */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -80,7 +80,6 @@ body.dark {
   transform: scale(1.1);
 }
 
-/* Theme Toggle Button */
 .theme-toggle {
   background: none;
   border: none;
@@ -94,14 +93,12 @@ body.dark {
   transform: scale(1.2);
 }
 
-/* Hamburger Icon (Mobile Only) */
 .hamburger {
   display: none;
   font-size: 26px;
   cursor: pointer;
 }
 
-/* Side Drawer (Mobile Menu) */
 .side-drawer {
   position: fixed;
   top: 0;
@@ -141,7 +138,6 @@ body.dark {
   cursor: pointer;
 }
 
-/* Dark Mode */
 body.dark .navbar {
   background-color: rgba(31, 42, 54, 0.9);
 }
@@ -150,7 +146,6 @@ body.dark .nav-links li::after {
   background-color: white;
 }
 
-/* Overlay when menu is open */
 .overlay {
   position: fixed;
   top: 0;
@@ -161,7 +156,6 @@ body.dark .nav-links li::after {
   z-index: 1050;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
