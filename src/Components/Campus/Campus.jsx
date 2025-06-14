@@ -8,7 +8,7 @@ import forwardarrow from '../../assets/next.png';
 
 const Campus = () => {
   return (
-    <div className='campus'>
+    <div className='university'>
         <div className='gallery'>
             <img src={pic1} alt='uni-pic1'/>
             <img src={pic2} alt='uni-pic2'/>

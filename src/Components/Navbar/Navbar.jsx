@@ -4,6 +4,7 @@ import logo from '../../assets/images/universitylogos2.png';
 import Search from '../../assets/search.png';
 import User from '../../assets/user.png';
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
+import { Link, ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,12 +30,12 @@ const Navbar = () => {
         <img src={logo} alt="University Logo" className="nav-logo" />
 
         <ul className="nav-links">
-          <li>Home</li>
-          <li>Program</li>
-          <li>About Us</li>
-          <li>University</li>
-          <li>Testimonials</li>
-          <li>Contact Us</li>
+          <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
+          <li><Link to='program' smooth={true} offset={-330} duration={500}>Program</Link></li>
+          <li><Link to='about' smooth={true} offset={-150} duration={500}>About Us</Link></li>
+          <li><Link to='university' smooth={true} offset={-250} duration={500}>University</Link></li>
+          <li><Link to='testimonials' smooth={true} offset={-300} duration={500}>Testimonials</Link></li>
+          <li><Link to='contact' smooth={true} offset={-250} duration={500}>Contact Us</Link></li>
         </ul>
 
         <div className="navbar-right">

@@ -7,7 +7,7 @@ import education from '../../assets/images/education.png';
 
 const Programs = () => {
   return (
-    <div className='programs'>
+    <div className='program'>
       <div className="programs-info">
         <img src={img1} alt='image1'/>
         <div className="caption">

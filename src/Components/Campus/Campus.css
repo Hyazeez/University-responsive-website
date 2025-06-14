@@ -1,4 +1,4 @@
-.campus {
+.university {
   padding: 50px 30px;
   text-align: center;
 }
@@ -46,4 +46,39 @@
 .setbtn img {
   width: 20px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .university {
+    padding: 40px 15px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 10px 10%;
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+
+  .setbtn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .setbtn img {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .setbtn {
+    font-size: 14px;
+  }
+
+  .gallery img {
+    height: 160px;
+  }
 }
