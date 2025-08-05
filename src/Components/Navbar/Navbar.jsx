@@ -53,12 +53,12 @@ const Navbar = () => {
       <div className={`side-drawer ${menuOpen ? 'open' : ''}`}>
         <FaTimes className="close-icon" onClick={() => setMenuOpen(false)} />
         <ul>
-          <li onClick={() => setMenuOpen(false)}>Home</li>
-          <li onClick={() => setMenuOpen(false)}>Program</li>
-          <li onClick={() => setMenuOpen(false)}>About Us</li>
-          <li onClick={() => setMenuOpen(false)}>University</li>
-          <li onClick={() => setMenuOpen(false)}>Testimonials</li>
-          <li onClick={() => setMenuOpen(false)}>Contact Us</li>
+          <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
+          <li><Link to='program' smooth={true} offset={-330} duration={500}>Program</Link></li>
+          <li><Link to='about' smooth={true} offset={-150} duration={500}>About Us</Link></li>
+          <li><Link to='university' smooth={true} offset={-250} duration={500}>University</Link></li>
+          <li><Link to='testimonials' smooth={true} offset={-300} duration={500}>Testimonials</Link></li>
+          <li><Link to='contact' smooth={true} offset={-250} duration={500}>Contact Us</Link></li>
         </ul>
       </div>
     </>
