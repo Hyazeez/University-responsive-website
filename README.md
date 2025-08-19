@@ -1,12 +1,40 @@
-# React + Vite
+# 🌐 Informational & institutional Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **responsive university website** built with **React**, **Vite**, and **CSS3**. It showcases modern UI design with responsiveness across devices.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💡 Features
 
-## Expanding the ESLint configuration
+- ⚡ Built with **React + Vite**
+- 🎨 Styled using **CSS3**
+- 📱 Fully responsive design
+- 🖼️ Organized project structure
+- 🌙 Clean UI with smooth animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack  
+
+- **Frontend:** [React](https://react.dev/), [Vite](https://vitejs.dev/), CSS3
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Server:** Node.js (for development)  
+
+---
+
+## 📁 Project Structure
+
+```bash
+University-responsive-website/
+│── .git/              # Git repository data
+│── dist/              # Production build output
+│── node_modules/      # Installed dependencies
+│── public/            # Public static files (images, icons, etc.)
+│── src/               # Source code (React components, pages, styles)
+│── .gitignore         # Git ignore rules
+│── eslint.config.js   # ESLint configuration
+│── index.html         # Entry HTML file
+│── package.json       # Project metadata and dependencies
+│── package-lock.json  # Dependency lock file
+│── README.md          # Project documentation
+│── vite.config.js     # Vite configuration
